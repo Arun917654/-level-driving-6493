@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>admin page</title>
+    <style>
+        #addParent{
+            border: 3px solid  black;
+            height: 150px;
+            text-align: center;
+        }
+        #product{
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            border: 3px solid black;
+            height: 100px;
+            margin: auto;
+            justify-content: space-between;
+            
+        }
+        #product > input{
+            text-align: center;
+            border-radius: 5px;
+            height: 15px;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+            border: none;
+        }
+        #data{
+            border: 3px solid black;
+            height: auto;
+            margin: auto;
+        }
+
+        #data table{
+            margin: auto;
+        }
+        
+        .image {
+            width: 100px;
+        }
+        table{
+            margin:auto;
+            text-align: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+      
+        <div id="addParent">
+          <div id="product" >
+            <input type="text" id="image" placeholder="enter image url">
+            <input type="text" id="name" placeholder="enter product Name">
+            <input type="text" id="title" placeholder="enter Title">
+            <input type="text" id="price" placeholder="enter price ">
+          </div>
+          <button id="addProducts">Add Product</button>
+        </div>
+       <div id="data">
+        <table>
+            <tr>
+            <thead>
+                <th>Image</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Title</th>
+                <th>Remove</th>
+                <th>in</th>
+              </thead>
+            </tr>
+            <tbody>
+                <!-- append the data here -->
+            </tbody>
+        </table>
+    </div>
+    
+</body>
+</html>
+<script src="admin.js"></script>
