@@ -1,0 +1,43 @@
+#carosal{
+    border: 2px solid black;
+    height: 300px;
+}
+
+#container{
+    display: flex;
+    /* border: 3px solid red; */
+    /* height: 800px; */
+    width: 100%;
+}
+
+#functions{
+    border: 3px solid black;
+    width: 16%;
+}
+
+#products{
+    width: 80%;
+    /* height: 300; */
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    justify-content: space-between;
+    gap: 45px;
+}
+
+.cards{
+    width: 100%; 
+    /* border: 3px solid red; */
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    text-align: center;
+    border-radius: 10px;
+}
+.cards > #imagediv{
+    width: 70%;
+    margin: auto;
+    border-radius: 10px;
+    /* height: 100px; */
+    /* border: 3px solid red; */
+}
+#imagediv > img{
+    width: 100%;
+}
