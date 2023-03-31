@@ -408,11 +408,3 @@ h2{
 #mid > #lstimg > a > img{
     width: 100%;
 }
-#footer{
-    background: rgb(234, 234, 234);
-    padding-top: 50px;
-    padding-bottom: 65px;
-}
-#footer > #firstfoot > img{
-    width: 100%;
-}
