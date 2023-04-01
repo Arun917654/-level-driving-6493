@@ -4,34 +4,21 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>LOGIN</title>
+    <title>REGISTER</title>
     <link rel="stylesheet" href="css/sign.css">
-    <script src="./scripts/login.js" type="module"></script>
-    <style>
-        .s_register_number_mobile{
-            margin-top: 3%;
-        }
-        .s_p_first{
-            font-size: 16px;
-            width: 75%;
-            margin: 13% auto;
-        }
+    <script src="./scripts/register.js" type="module"></script>
 
-
-    </style>
   </head>
   <body>
     <div class="s_register_number">
       <div class="s_register_number_head">
         <a href="log.html">×</a>
-        <span>LOGIN</span>
+        <span>REGISTER</span>
     </div>
+    <p class="s_p_first">Welcome to Nykaa!</p>
+    <p class="s_span_pink">Register now and get <span >2000</span> <span>Reward Points!</span></p>
       <input type="text" name="" id="number" class="s_register_number_mobile" placeholder="Enter Email ID or Phone Number" />
-      <div class="s_p_first">
-          <p >Welcome back Nykaa user,
-            Please enter the OTP sent on your phone</p>
-          <p >(Be sure to check your spam folder)</p>
-      </div>
+      <p class="s_p_first">Please enter the OTP sent to verify your phone number</p>
     <div class="s_otp_flex">
         <div class="s_otp_flex2">
             <label for="s_otp">OTP</label>
@@ -48,12 +35,15 @@
       <button id="s_register_proceed"> VERIFY</button>
     </div>
     <div id="alertBox">
-        <p id="alert_title"></p>
-        <p id="alert_des"></p>
-        <button id="close_alert">close</button>
-    </div>
+      <p id="alert_title"></p>
+      <p id="alert_des"></p>
+      <button id="close_alert">close</button>
+  </div>
   </body>
 </html>
 <script>
-
+  document.getElementById("s_register_proceed").onclick = ()=>{
+    location.href = "signDatails.html"
+  }
+  
 </script>
