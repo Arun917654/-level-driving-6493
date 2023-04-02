@@ -2,7 +2,20 @@
     border: 2px solid black;
     height: 300px;
 }
-
+#buttons{
+ 
+  margin: auto;
+  justify-content: center;
+  text-align: center;
+  display: flex;
+  gap: 10px;
+  padding: 40px;
+}
+#buttons > button{
+  /* border: none; */
+  border-color: #575757;
+  padding: 15px;
+}
 #container{
     display: flex;
     /* border: 3px solid red; */

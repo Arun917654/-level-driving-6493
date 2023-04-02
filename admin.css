@@ -44,7 +44,7 @@ select {
 }
 #addProducts {
   padding: 10px 20px;
-  background-color: #008CBA;
+  background-color: #0009ba;
   border: none;
   color: #fff;
   cursor: pointer;
@@ -55,7 +55,7 @@ select {
 }
 
 #addProducts:hover {
-  background-color: #005d76;
+  background-color: #760000;
 }
 .image{
   width: 50%;
@@ -85,7 +85,7 @@ th, td {
 }
 
 th {
-  background-color: #008CBA;
+  background-color: #ba0000;
   color: #fff;
   font-weight: bold;
 }
@@ -122,6 +122,13 @@ td:last-child button.edit:hover {
   background-color: #2980b9;
 }
 
+.remove{
+  background-color: red;
+  padding: 3px;
+  color: white;
+  border: none;
+  font-weight: bold;
+}
 
 /* Style the Remove button */
 /* button.remove {
@@ -131,7 +138,7 @@ td:last-child button.edit:hover {
   padding: 8px 12px;
   border-radius: 4px;
   cursor: pointer;
-  font-weight: bold;
+  
 } */
 
 

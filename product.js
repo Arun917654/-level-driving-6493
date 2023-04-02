@@ -18,7 +18,7 @@ try {
     console.log(error)
 }
 
-}Fetchdata("http://localhost:3000/posts")
+}Fetchdata(`http://localhost:3000/posts?_page=${1}&_limit=${10}`)
 // ---------------------Sort-----------------------------
 
 rangebtn.addEventListener("change",()=>{
@@ -78,6 +78,9 @@ filterbycolor.addEventListener("change",()=>{
     }
     else if(filterbycolor.value=="silver"){
         Fetchdata("http://localhost:3000/posts?color=silver&author=typicode")
+    }
+    else if(filterbycolor.value=="pink"){
+        Fetchdata("http://localhost:3000/posts?color=pink&author=typicode")
     }else{
         Fetchdata("http://localhost:3000/posts")
     }
@@ -208,4 +211,19 @@ function myFunction() {
   }
 
 
-  
+  function  createbutton(){
+    let btndiv=document.getElementById("buttons");
+
+    for(let i=1;i<=5;i++){
+       let btn=document.createElement("button");
+       btn.innerText=i;
+
+       btn.addEventListener("click",()=>{
+            Fetchdata(`http://localhost:3000/posts?_page=${i}&_limit=${10}`)
+       })
+       btndiv.append(btn)
+    }
+  }
+  createbutton()
+
+ 
