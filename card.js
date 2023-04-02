@@ -9,8 +9,7 @@ function DisplayProduct(data) {
   Cart.forEach((product) => {
     let card = document.createElement("div");
     let image = document.createElement("img");
-    let brand = document.createElement("h3");
-    let category = document.createElement("p");
+    let name = document.createElement("h3");
     let details = document.createElement("p");
     let quantity = document.createElement("span");
     let price = document.createElement("h4");
@@ -20,12 +19,11 @@ function DisplayProduct(data) {
     quantity.textContent=product.quantity
     Remove.textContent = "Remove";
     Increment.textContent="+"
+    name.innerText=product.name;
     Decrement.textContent="-"
-    image.src = product.img;
-    brand.textContent = product.brand;
-    category.textContent = product.category;
-    price.textContent = `₹${product.price}`;
-    details.textContent = product.details;
+    image.src = product.Image;
+    details.innerText=product.description
+    price.textContent = `₹${product.Price}`;
     
     Remove.addEventListener("click", () => {
         Cart=Cart.filter((ele)=>{
@@ -49,7 +47,7 @@ function DisplayProduct(data) {
       }
     });
 
-    card.append(image, brand, price, details, category, Increment,quantity,Decrement,Remove);
+    card.append(image, price, details, Increment,quantity,Decrement,Remove);
     Container.append(card);
   });
 

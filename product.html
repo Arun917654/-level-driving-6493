@@ -5,13 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>product page</title>
-    <link rel="stylesheet" href="product.css">
+   <link rel="stylesheet" href="product.css">
 </head>
 <body>
     
-    <div id="carosal">
-        <!-- carosal will come here -->
-    </div>
+    <button onclick="myFunction()">Dark Mode</button>
+<div class="banner-box">  
+  <div class="slideshow-container">
+  
+      <div class="slide fade">
+        <a href="#"><img class="desktop" src="https://adn-static1.nykaa.com/nykdesignstudio-images/pub/media/fermion/images/category_slider/img/tr:w-3038,/Forever-New-x-Pooja-Hegde_Desktop_2.jpg?rnd=20200526195200"></a>
+      </div>
+      <div class="slide fade">
+        <a href="#"><img class="desktop" src="https://adn-static1.nykaa.com/nykdesignstudio-images/pub/media/fermion/images/category_slider/img/tr:w-3038,/3.WW.2.desktop%20(1).jpg?rnd=20200526195200"></a>
+      </div>
+      <div class="slide fade">
+        <a href="#"><img class="desktop" src="https://adn-static1.nykaa.com/nykdesignstudio-images/pub/media/fermion/images/category_slider/img/tr:w-3038,/banner-2_2880x48054.jpg?rnd=20200526195200"></a>
+      </div>
+  
+      <i class="fa-solid fa-chevron-left prev"></i>
+      <i class="fa-solid fa-chevron-right next"></i>
+      
+      <div class="dots">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+  </div>
+</div>
   <div id="container">
 
     <div id="functions">
@@ -24,12 +45,14 @@
       <option value="2000">2000</option>
       <option value="3000">3000</option>
      </select>
+     <br>
 
      <select  class="select-by-price">
       <option value="">Sort By price</option>
-      <option value="desc">Low to High</option>
-      <option value="asc">High to Low</option>
+      <option value="asc">Low to High</option>
+      <option value="desc">High to Low</option>
   </select>
+  <br>
     
   <select  id="Color">
     <option value="">Filter By Color</option>
@@ -41,6 +64,7 @@
     <option value="silver">silver</option>
     
 </select>
+<br>
     </div>
     <div id="products">
       <!-- will append products here -->

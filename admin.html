@@ -21,13 +21,41 @@
         <input type="text" id="name" placeholder=" Enter Product Name">
         <input type="text" id="image" placeholder="Enter image url">
         <input type="text" id="price" placeholder="Enter price ">
-        <input type="text" id="category" placeholder="Enter category ">
-        <input type="text" id="description" placeholder="description ">
-        <input type="text" id="Color" placeholder="Color ">
-      </div>
-      <button id="addProducts">Add Product</button>
-    </div>
 
+        <input type="text" id="description" placeholder="description ">
+        <!-- <input type="text" id="Color" placeholder="Color "> -->
+        <select id="Color">
+          <option value="">Select Color</option>
+          <option value="red">red</option>
+          <option value="blue">blue</option>
+          <option value="black">black</option>
+          <option value="green">green</option>
+          <option value="gold">gold</option>
+          <option value="silver">silver</option>
+        </select>
+      </div>
+    <button id="addProducts">Add Product</button>
+  
+    </div>
+    <div id="data">
+      <table>
+          <tr>
+            <thead>
+              <th>Image</th>
+              <th>Name</th>
+              <th>Price</th>
+              <th>Category</th>
+              <th>description</th>
+              <th>Color</th>
+              <th>Remove</th>
+             
+            </thead>
+          </tr>
+          <tbody>
+              <!-- append the data here -->
+          </tbody>
+      </table>
+  </div>
 <!-- ///////////////////////////////////////////// -->
 
 <!-- <div id="addParent">
@@ -47,25 +75,7 @@
 </div>
 
 
-       <div id="data">
-        <table>
-            <tr>
-              <thead>
-                <th>Image</th>
-                <th>Name</th>
-                <th>Price</th>
-                <th>Category</th>
-                <th>description</th>
-                <th>Color</th>
-                <th>Remove</th>
-               
-              </thead>
-            </tr>
-            <tbody>
-                <!-- append the data here -->
-            </tbody>
-        </table>
-    </div>
+      
     
 </body>
 </html>

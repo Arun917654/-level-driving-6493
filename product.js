@@ -3,11 +3,14 @@ let buttons=document.getElementById("buttons")
 let rangebtn=document.getElementById("range");
 let sortbyprice=document.querySelector(".select-by-price")
 let filterbycolor=document.getElementById("Color")
+let addtocartbutton=document.getElementsByName("addtocart");
 // Fetch & render users
+c=[];
+let arun = JSON.parse(localStorage.getItem("id"))||[];
+
 async function  Fetchdata(url){
 try {
     let res=await  fetch(url);
-    console.log(res)
     let data=await res.json()
    
    display(data)
@@ -48,9 +51,9 @@ try {
 // ---------------------------sort by price------------------------
 sortbyprice.addEventListener("change",()=>{
     if(sortbyprice.value==="asc"){
-        Fetchdata("http://localhost:3000/posts?_sort=Price&_order=desc")
-    }else if(sortbyprice.value==="desc"){
         Fetchdata("http://localhost:3000/posts?_sort=Price&_order=asc")
+    }else if(sortbyprice.value==="desc"){
+        Fetchdata("http://localhost:3000/posts?_sort=Price&_order=desc")
     }else{
         Fetchdata("http://localhost:3000/posts")
     }
@@ -83,11 +86,11 @@ filterbycolor.addEventListener("change",()=>{
 function display(data){
     products.innerHTML=null;
      data.forEach(e => {
-        products.append(makecards(e.Image,e.name,e.Price))
+        products.append(makecards(e.Image,e.name,e.Price,e.description,e.id))
         
     });
 }
-function makecards(image,name,price){
+function makecards(image,name,price,description,id){
   let card=document.createElement("div");
   card.className="cards";
   let imagediv=document.createElement("div");
@@ -97,14 +100,112 @@ function makecards(image,name,price){
 imagediv.append(img)
   let productname=document.createElement("p");
   productname.innerText=name;
-
+let prodesc=document.createElement("p");
+prodesc.innerText=description;
   let productprice=document.createElement("p");
   productprice.innerText=price;
   
   let addtocart=document.createElement("button");
-  addtocart.innerText="Add To Cart"
-  card.append(imagediv,productname,productprice,addtocart);
+  addtocart.innerText="Add To Cart";
+  addtocart.className="addtocart";
+ 
+  card.append(imagediv,productname,productprice,prodesc,addtocart);
+ addtocart.addEventListener("click",()=>{
+    let cdata={
+        "image":image,
+        "name":name,
+        "price":price,
+        "description":description.value,
+        "id":id
 
+    }
+    c.push(cdata)
+    localStorage.setItem("cart",JSON.stringify(c))
+
+    
+  })
   return card
 }
 
+ 
+
+
+// -------------------------------------
+
+var timeOut = 0;
+var slideIndex = 0;
+var autoOn = true;
+
+var dots = document.querySelectorAll('.dot');
+var prevArrow = document.querySelector('.prev');
+var showArrow = document.querySelector('.next');
+
+autoSlides();
+
+function autoSlides() {
+    timeOut = timeOut - 20;
+    if (autoOn == true && timeOut < 0) {
+        showSlides();
+    }
+    setTimeout(autoSlides, 20);
+}
+
+function prevSlide() {
+
+    timeOut = 5000;
+
+    var slides = document.querySelectorAll(".slide");
+
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slideIndex--;
+
+    if (slideIndex > slides.length) {
+        slideIndex = 1
+    }
+    if (slideIndex == 0) {
+        slideIndex = 3
+    }
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
+}
+
+function showSlides() {
+
+    timeOut = 1700;
+
+    var slides = document.querySelectorAll(".slide");
+
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slideIndex++;
+
+    if (slideIndex > slides.length) {
+        slideIndex = 1
+    }
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
+}
+
+prevArrow.addEventListener('click', ()=> {
+    prevSlide();
+})
+
+showArrow.addEventListener('click', ()=> {
+    showSlides();
+})
+
+
+
+
+function myFunction() {
+    var element = document.body;
+    element.classList.toggle("dark-mode");
+  }
+
+
+  

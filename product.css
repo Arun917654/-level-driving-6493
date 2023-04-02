@@ -11,8 +11,9 @@
 }
 
 #functions{
-    border: 3px solid black;
-    width: 16%;
+  margin-left: 15px;
+  margin-right: 20px;
+    width: 14%;
 }
 
 #products{
@@ -27,10 +28,12 @@
 .cards{
     width: 100%; 
     /* border: 3px solid red; */
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    padding: 10px;
+    box-shadow: gray 0px 0px 5px;
     text-align: center;
     border-radius: 10px;
 }
+
 .cards > #imagediv{
     width: 70%;
     margin: auto;
@@ -41,3 +44,114 @@
 #imagediv > img{
     width: 100%;
 }
+/* ----------------------------------------------- */
+
+
+.slide {
+    display: none;
+    width: 100%;
+  }
+  .slideshow-container {
+    width: 100%;
+    position: relative;
+    margin: auto;
+  }
+  
+  img{
+    width: 100%;
+    max-height: 400px;
+    min-height: 300px;
+  }
+  
+  .dots{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+  }
+  
+  .dot {
+  
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  
+  }
+  
+  .active {
+    background-color: #717171;
+  }
+  
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+  
+    to {
+        opacity: 1
+    }
+  }
+  
+  @keyframes fade {
+    from {
+        opacity: .4
+    }
+  
+    to {
+        opacity: 1
+    }
+  }
+  
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    padding: 16px 12px;
+    transform: translateY(-50%);
+    color: #575757;
+    background-color: rgba(0, 0, 0, 0.1);
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  .prev{
+    left: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  .next {
+    right: 0;
+  }
+  #products > div:hover{
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    -ms-transform: scale(1.1); /* IE 9 */
+  -webkit-transform: scale(1.1); /* Safari 3-8 */
+  transform: scale(1.1); 
+  }
+  /* ===--------------------------========== */
+
+  body {
+    padding: 25px;
+    background-color: white;
+    color: black;
+    font-size: 25px;
+  }
+  
+  .dark-mode {
+    background-color: black;
+    color: white;
+  }
